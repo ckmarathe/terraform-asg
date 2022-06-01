@@ -7,7 +7,6 @@ module "asg" {
   min_size                  = 1
   max_size                  = 1
   desired_capacity          = 1
-  wait_for_capacity_timeout = 0
   health_check_type         = "EC2"
   vpc_zone_identifier       = module.vpc.private_subnets
   instance_refresh = {
