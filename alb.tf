@@ -10,10 +10,6 @@ module "alb" {
   subnets            = module.vpc.public_subnets
   security_groups    = [module.sg.security_group_id]
 
-  access_logs = {
-    bucket = "my-alb-logs"
-  }
-
   target_groups = [
     {
       name_prefix      = "pref-"
