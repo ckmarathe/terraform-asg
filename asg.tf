@@ -30,6 +30,7 @@ module "asg" {
   instance_type     = "t3.micro"
   ebs_optimized     = true
   enable_monitoring = true
+  key_name          = "terraform-test"
 
   target_group_arns = module.alb.target_group_arns
 
