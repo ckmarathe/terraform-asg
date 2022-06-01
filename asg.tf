@@ -31,6 +31,8 @@ module "asg" {
   ebs_optimized     = true
   enable_monitoring = true
 
+  target_group_arns = module.alb.target_group_arns
+
   block_device_mappings = [
     {
       # Root volume
