@@ -60,12 +60,6 @@ module "asg" {
     cpu_credits = "standard"
   }
 
-  instance_market_options = {
-    market_type = "spot"
-    spot_options = {
-    }
-  }
-
   metadata_options = {
     http_endpoint               = "enabled"
     http_tokens                 = "required"
